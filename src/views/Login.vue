@@ -1,7 +1,7 @@
 <template>
-  <div class="container">
-    <h3 class="my-4 text-center">Log into your Account</h3>
-    <div class="d-flex justify-content-center">
+  <div class="container my-5">
+    <h3 class="text-center" style="margin-top: 200px">Log into your Account</h3>
+    <div class="d-flex justify-content-center mt-5">
       <label for="exampleInputEmail1" class="form-label"
         >Email: &nbsp;&nbsp;</label
       >
@@ -30,9 +30,13 @@
         />
       </p>
     </div>
-    <p class="text-center" v-if="errMsg">{{ errMsg }}</p>
+    <p class="text-center text-danger" v-if="errMsg">{{ errMsg }}</p>
     <div class="text-center">
-      <button @click="register" class="btn rounded btn-primary">
+      <button
+        @click="register"
+        class="btn btn-lg rounded"
+        style="background: #7695dd"
+      >
         <div
           v-if="isLoggedIn"
           class="spinner-border spinner-border-sm text-white"

@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <h3 class="my-4 text-center">Log into your Account</h3>
+  <div class="container my-5">
+    <h3 class="text-center" style="margin-top: 200px">Create your Account</h3>
     <div class="d-flex justify-content-center">
       <label for="exampleInputEmail1" class="form-label"
         >Email: &nbsp;&nbsp;</label
@@ -30,9 +30,13 @@
         />
       </p>
     </div>
-    <p class="text-center" v-if="errMsg">{{ errMsg }}</p>
+    <p class="text-center text-danger" v-if="errMsg">{{ errMsg }}</p>
     <div class="text-center">
-      <button @click="register" class="btn rounded btn-primary">
+      <button
+        @click="register"
+        class="btn btn-lg rounded"
+        style="background: #7695dd"
+      >
         <div
           v-if="isLoggedIn"
           class="spinner-border spinner-border-sm text-white"
@@ -55,6 +59,7 @@ import { useRouter } from "vue-router"; // import router
 const email = ref("");
 const password = ref("");
 const isLoggedIn = ref(false);
+const errMsg = ref(); // ERROR MESSAGE
 
 const router = useRouter(); // get a reference to our vue router
 
@@ -69,8 +74,9 @@ const register = () => {
     })
     .catch((error) => {
       isLoggedIn.value = false;
+      errMsg.value = error.message;
       console.log(error.code);
-      alert(error.message);
+      // alert(error.message);
     });
 };
 </script>

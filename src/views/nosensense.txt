@@ -1,0 +1,26 @@
+// try {
+  //   emailjs.sendForm(
+  //     "service_x48pznv",
+  //     "template_mvl68ns",
+
+  //     {
+  //       name: "jhhfhfhh",
+  //       email: senderEmail.value,
+  //       message: messagebody.value,
+  //     }
+  //   );
+  // } catch (error) {
+  //   console.log({ error });
+  // }
+  // // Reset form field
+  // senderName.value = "";
+  // senderEmail.value = "";
+  // messagebody.value = "";
+
+  Email.send({
+    SecureToken: "b89bfa46-efbb-4938-b6b5-035b1a3d3c27",
+    To: "stevensnowden3@gmail.com",
+    From: "stevensnowden3@gmail.com",
+    Subject: subject.value,
+    Body: messagebody.value,
+  }).then((message) => alert(message));

@@ -44,6 +44,24 @@ const routes = [
     //   requireAuth: true,
     // },
   },
+
+  // for my Resume Site
+  {
+    path: '/contact',
+    name: 'contact',  component: () => import('../views/Contact.vue')
+  },
+  {
+    path: '/resume',
+    name: 'resume',  component: () => import('../views/Resume.vue')
+  },
+  {
+    path: '/what-steven-does',
+    name: 'whatido',  component: () => import('../views/WhatIDo.vue')
+  },
+  {
+    path: '/projects',
+    name: 'projects',  component: () => import('../views/Projects.vue')
+  },
  
 ]
 

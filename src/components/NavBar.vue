@@ -1,58 +1,105 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-light">
-    <div class="container-fluid">
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarTogglerDemo03"
-        aria-controls="navbarTogglerDemo03"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="/">Lexical Grammar </a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div
+      class="container-fluid d-flex justify-content-between align-items-center"
+    >
+      <h1 class="logo me-auto me-lg-0">
+        <router-link
+          :to="{ name: 'home' }"
+          class="text-white text-monospace"
+          style="text-decoration: none"
+          >StevenKato</router-link
+        >
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li>
+            <router-link
+              :to="{ name: 'home' }"
+              class="text-white fs-5 text-monospace"
+              >Home</router-link
+            >
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+          <li>
+            <a
+              ><router-link
+                v
+                :to="{ name: 'about' }"
+                class="text-white fs-5 text-monospace"
+                >About</router-link
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              ><router-link
+                v
+                :to="{ name: 'resume' }"
+                class="text-white fs-5 text-monospace"
+                >Resume</router-link
+              ></a
+            >
+          </li>
+          <li>
+            <a
+              ><router-link
+                v
+                :to="{ name: 'whatido' }"
+                class="text-white fs-5 text-monospace"
+                >What I Do</router-link
+              ></a
+            >
           </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="/grammars">Resource</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/details">GrammarDetails</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/register">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link btn">SignOut</a>
+          <li>
+            <a
+              ><router-link
+                v
+                :to="{ name: 'contact' }"
+                class="text-white fs-5 text-monospace"
+                >Contact</router-link
+              ></a
+            >
           </li>
         </ul>
-        <form class="d-flex" role="search">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+
+      <div class="header-social-links">
+        <a
+          href="https://wa.me/256781667628"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-whatsapp"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/profile.php?id=100004184504691"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-facebook"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/kwesiga-kato-steven-b58557164/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i class="bi bi-linkedin"></i
+        ></a>
       </div>
     </div>
-  </nav>
+  </header>
+  <!-- End Header -->
 </template>
 
-
-
 <style>
+router-link {
+  color: green;
+}
 </style>

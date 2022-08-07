@@ -3,6 +3,8 @@ import App from './App.vue'
 import router from './router'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
+import 'bootstrap-icons/font/bootstrap-icons';
+
 // import * as firebase from "firebase/app";
 
 
@@ -10,13 +12,14 @@ import { initializeApp } from "firebase/app";
 import { getDatabase } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDQP64eaieYHLFNCcA4EQr98nb58EqNNjo",
-  authDomain: "vue3athu.firebaseapp.com",
-  projectId: "vue3athu",
- databaseURL: 'https://vue3athu-default-rtdb.firebaseio.com/',
-  storageBucket: "vue3athu.appspot.com",
-  messagingSenderId: "169241553993",
-  appId: "1:169241553993:web:bf6ef5fc29081becfea398"
+  apiKey: "AIzaSyCblqUlvffewdQ2qZ1rolIH834WMLYroI0",
+  authDomain: "kwesiga-steven.firebaseapp.com",
+ databaseURL: 'https://kwesiga-steven-default-rtdb.firebaseio.com/',
+  projectId: "kwesiga-steven",
+  storageBucket: "kwesiga-steven.appspot.com",
+  messagingSenderId: "400398567934",
+  appId: "1:400398567934:web:dfe74340a3de241146d8af",
+  measurementId: "G-H4P9T83L1Y"
 };
 
 // Initialize Firebase

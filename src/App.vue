@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg bg-light">
+  <!-- <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <button
         class="navbar-toggler"
@@ -47,6 +47,7 @@
         </ul>
         <form class="d-flex" role="search">
           <input
+            @click="handleSearch"
             class="form-control me-2"
             type="search"
             placeholder="Search"
@@ -56,7 +57,7 @@
         </form>
       </div>
     </div>
-  </nav>
+  </nav> -->
   <!-- <nav>
     <router-link to="/">Home</router-link> |
     <router-link v-if="isLoggedIn" to="/grammars">Resource</router-link> |
@@ -71,7 +72,9 @@
       <router-link to="/login"> Login </router-link>
     </span>
   </nav> -->
+  <NavBar />
   <router-view />
+  <Footer />
 </template>
 
 <script setup>
@@ -79,9 +82,10 @@ import NavBar from "@/components/NavBar";
 import { ref, onMounted } from "vue";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { useRouter } from "vue-router";
+import Footer from "./components/Footer.vue";
 
 components: {
-  NavBar;
+  NavBar, Footer;
 }
 const router = useRouter();
 const isLoggedIn = ref(false);
